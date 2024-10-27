@@ -9,6 +9,10 @@ public class Num1 {
     public static int solution(int N, int number) {
         List<Set<Integer>> countList = new ArrayList<>();
 
+        if (N == number) {
+            return 1;
+        }
+
         for(int i=0; i<9; i++) {
             countList.add(new HashSet<>());
         }
@@ -50,15 +54,10 @@ public class Num1 {
             }
         }
 
-//        for(Set<Integer> sub : countList){
-//            if(sub.contains(number))
-//                return countList.indexOf(sub);
-//        }
-
         return -1;
     }
 
     public static void main(String[] argv) {
-        solution();
+//        solution();
     }
 }
